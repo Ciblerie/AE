@@ -19,5 +19,5 @@ while ($row = $result->fetch_assoc()) {
 }
 
 echo json_encode($scores);
-$conn->close();
+$conn -> close();
 ?>
