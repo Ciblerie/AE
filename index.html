@@ -36,3 +36,75 @@
     <ul id="score-list"></ul>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onglets Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .tab-container {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 10px;
+        }
+        .tab {
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #444;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        .tab:hover {
+            background-color: #555;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tab" onclick="openTab('accueil')">Accueil</div>
+        <div class="tab" onclick="openTab('connexion')">Connexion</div>
+        <div class="tab" onclick="openTab('produits')">Nos produits</div>
+    </div>
+    
+    <div id="accueil" class="content active">
+        <h2>Accueil</h2>
+        <p>Bienvenue sur notre site !</p>
+    </div>
+    
+    <div id="connexion" class="content">
+        <h2>Connexion</h2>
+        <p>Veuillez entrer vos identifiants.</p>
+    </div>
+    
+    <div id="produits" class="content">
+        <h2>Nos Produits</h2>
+        <p>Découvrez notre gamme de produits.</p>
+    </div>
+    
+    <script>
+        function openTab(tabId) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

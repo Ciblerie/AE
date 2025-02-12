@@ -1,0 +1,6 @@
+body {
+    background-image: url('https://www.pexels.com/fr-fr/chercher/arri%C3%A8re-plans%20de%20bureau/); /* Chemin de l'image */
+    background-size: cover; /* Ajuste l'image pour couvrir toute la page */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition */
+}
